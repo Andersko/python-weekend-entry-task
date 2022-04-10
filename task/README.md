@@ -53,7 +53,7 @@ The output will be a json-compatible structured list of trips sorted by price. T
 | `total_price`  | The total price for the trip.                                 |
 | `travel_time`  | The total travel time.                                        |
 
-**For more information, check the example section.**
+**For more information, check the example section (`input_example/`).**
 
 ### Points of interest
 Assuming your solution is working, we'll be additionally judging based on following skills:
