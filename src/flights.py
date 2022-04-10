@@ -7,7 +7,7 @@ from datetime import datetime
 from constants import *
 
 
-def search(dataset, orig, dest, bags):
+def search(dataset, orig, dest, bags) -> str:
     """Perform a search of possible flight combinations for selected route, based on other search parameters.
 
     Note: One possible optimization
@@ -30,7 +30,7 @@ def search(dataset, orig, dest, bags):
 
     # These variables save indexes of flights into dataset as list of lists of indexes (paths from orig to dest)
     # instead of whole records of dataset flights, to save memory, because number of items in `potential_routes` might
-    # potentially grow large, larger than number if items in dataset, if large dataset is provided
+    # potentially grow large, larger than number of items in dataset, if large dataset is provided
     potential_routes = []
     found_routes = []
 
@@ -77,7 +77,7 @@ def search(dataset, orig, dest, bags):
     return _format_json(dataset, found_routes, bags, sort_by='total_price')
 
 
-def _format_json(dataset, found_routes, bags_count, sort_by=None):
+def _format_json(dataset, found_routes, bags_count, sort_by=None) -> str:
     """Formats found routes in form of indexes into json string.
 
     :param dataset: Input data. Note: data should already be well-formatted. For more info check module `csv_handler`.
@@ -88,6 +88,7 @@ def _format_json(dataset, found_routes, bags_count, sort_by=None):
     :type bags_count: int
     :param sort_by: Defaults to `None`. If `None`, returned json is not sorted in any kind. If 'total_price', returned
                     json trips (first level dictionaries in first array) are sorted by their total prices.
+    :type sort_by: None or str
     :raise ValueError: If parameter sort_by is not supported.
     :return: Json formatted found routes.
     """
