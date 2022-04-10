@@ -93,7 +93,7 @@ def _format_json(dataset, found_routes, bags_count, sort_by=None) -> str:
     :return: Json formatted found routes.
     """
     if sort_by not in [None, 'total_price']:
-        raise ValueError(f'illegal newline value: {sort_by}')
+        raise ValueError(f'illegal sort_by value: {sort_by}')
 
     data = []
 
