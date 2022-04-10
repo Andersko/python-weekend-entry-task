@@ -1,4 +1,4 @@
-"""Module for handling csv format input
+"""Module for handling csv format input.
 """
 import csv
 from datetime import datetime
