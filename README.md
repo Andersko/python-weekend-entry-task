@@ -7,7 +7,7 @@ For more information about tool, such as usage or input/output, check `task/READ
 
 ### Usage
 
-This tool can work as imported python package, but is mainly aimed to run from terminal. To run tool from `src` directory:
+This tool can work as imported python package, but is mainly aimed to run from terminal. If imported as module, csv file checks are omitted, and it is expected, to be already well-formed. To run tool from `src` directory:
 ```
 python3 -m solution ../input_example/example_from_task.csv BTW REJ --b=1
 ```
